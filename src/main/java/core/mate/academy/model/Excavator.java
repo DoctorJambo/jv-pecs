@@ -5,7 +5,13 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private boolean hasBucket;
+
     public Excavator() {
+    }
+
+    public Excavator(boolean hasBucket) {
+        this.hasBucket = hasBucket;
     }
 
     @Override
