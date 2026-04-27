@@ -22,15 +22,21 @@ public class MachineServiceImpl implements MachineService<Machine> {
         TruckProducerImpl truckProducer = new TruckProducerImpl();
 
         if (type == Bulldozer.class) {
-            return bulldozerProducer.get();
+            List<Machine> bulldozer = new ArrayList<>();
+            bulldozer.addAll(bulldozerProducer.get());
+            return bulldozer;
         }
 
         if (type == Excavator.class) {
-            return excavatorProducer.get();
+            List<Machine> excavator = new ArrayList<>();
+            excavator.addAll(excavatorProducer.get());
+            return excavator;
         }
 
         if (type == Truck.class) {
-            return truckProducer.get();
+            List<Machine> trucks = new ArrayList<>();
+            trucks.addAll(truckProducer.get());
+            return trucks;
         }
 
         return new ArrayList<>();
